@@ -13,7 +13,7 @@ function App() {
 
   const fetchSSE = () => {
     setSseData('');
-    fetch('http://localhost:3001', {
+    fetch('http://localhost:3001/api/ai', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

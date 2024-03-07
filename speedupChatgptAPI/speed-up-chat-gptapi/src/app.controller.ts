@@ -18,7 +18,7 @@ export class AppController {
       for (const char of chunk.choices[0].delta?.content || '') {
         //console.log(char);
         res.write(`${char}`); // 한 글자씩 EventSource로 전송
-        await new Promise((resolve) => setTimeout(resolve, 25)); // 각 글자를 100ms 간격으로 전송
+        await new Promise((resolve) => setTimeout(resolve, 10)); // 각 글자를 100ms 간격으로 전송
       }
     }
     res.end();

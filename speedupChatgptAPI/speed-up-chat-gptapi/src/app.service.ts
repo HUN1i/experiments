@@ -2,7 +2,7 @@ import { Injectable, Next } from '@nestjs/common';
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-  apiKey: '안알랴줌',
+  apiKey: 'z',
 });
 
 @Injectable()
@@ -14,7 +14,7 @@ export class AppService {
         { role: 'system', content: 'you are a novelist.' },
         {
           role: 'user',
-          content: `${keyword} 단어를 포함하는 소설을 작성해.`,
+          content: `write just a novel in Korean with this keywords: ${keyword}, Don't say anything except about novel, Don't write a title. `,
         },
       ],
       model: 'gpt-3.5-turbo',
